@@ -4,7 +4,7 @@ import { appRoutes } from 'utils';
 
 export const Navbar = () => {
     return (
-        <nav className="self-start py-3 md:py-5 max-w-7xl mx-auto">
+        <nav className="py-3 md:py-5 max-w-7xl mx-auto self-start w-full">
             <Link to={appRoutes.HOME_PAGE}>
                 <AppIcon />
             </Link>
