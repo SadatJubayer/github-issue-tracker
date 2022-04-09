@@ -6,6 +6,7 @@ export const strings = {
     repo_name: 'Repository name',
     show_issues: 'Show issues',
     required_field: 'This field is required',
+    something_went_wrong: 'Something went wrong!',
 
     /* Not found page  */
     not_found: 'Page not found!',

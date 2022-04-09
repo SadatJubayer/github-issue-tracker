@@ -4,3 +4,7 @@ export const appRoutes = {
 
     NOT_FOUND: '404',
 };
+
+export const apiRoutes = {
+    issues: 'search/issues',
+};
