@@ -8,6 +8,12 @@ export const strings = {
     required_field: 'This field is required',
     something_went_wrong: 'Something went wrong!',
 
+    opened: 'Opened',
+    by: 'by',
+    prev: 'Prev',
+    next: 'Next',
+    no_issues: 'No issues found',
+
     /* Not found page  */
     not_found: 'Page not found!',
     not_found_desc: `Sorry, we couldn't find the page you're looking for!`,

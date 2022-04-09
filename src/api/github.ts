@@ -1,9 +1,7 @@
 import { AxiosError } from 'axios';
 import { IIssue } from 'types/IIssue';
-import { apiRoutes } from 'utils/constants';
+import { apiRoutes, ISSUES_PER_PAGE } from 'utils/constants';
 import { axios } from './apiClient';
-
-const ISSUES_PER_PAGE = 20;
 
 //@Types
 interface IGitHubInputs {

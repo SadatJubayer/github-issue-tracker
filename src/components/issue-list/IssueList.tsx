@@ -1,5 +1,5 @@
 import { IssueItem } from 'components';
-import { Layout } from 'components/layout/Layout';
+import { EmptyList } from 'components/empty-list/EmptyList';
 import { TotalIssue } from 'components/total-issue/TotalIssue';
 import { IIssue } from 'types/IIssue';
 
@@ -10,13 +10,12 @@ interface IIssueListProps {
 
 export const IssueList = ({ issues, totalCount }: IIssueListProps) => {
     return (
-        <Layout centerContent>
-            <div className="border border-white/20 rounded">
-                <TotalIssue totalCount={totalCount} />
-                {issues.map((issue) => (
-                    <IssueItem key={issue.id} issue={issue} />
-                ))}
-            </div>
-        </Layout>
+        <div className="border border-white/20 rounded flex-1 min-w-[90%] md:min-w-[800px]">
+            <TotalIssue totalCount={totalCount} />
+            {issues.length === 0 && <EmptyList />}
+            {issues.map((issue) => (
+                <IssueItem key={issue.id} issue={issue} />
+            ))}
+        </div>
     );
 };

@@ -8,3 +8,5 @@ export const appRoutes = {
 export const apiRoutes = {
     issues: 'search/issues',
 };
+
+export const ISSUES_PER_PAGE = 20;

@@ -1,4 +1,5 @@
 export { Button } from './button/Button';
+export { EmptyList } from './empty-list/EmptyList';
 export { Error } from './error/Error';
 export { Input } from './input/Input';
 export { IssueItem } from './issue-item/IssueItem';

@@ -1,5 +1,5 @@
 import { SpinnerIcon } from 'assets/icons';
-import { Layout } from 'components/layout/Layout';
+import cn from 'classnames';
 
 interface ISpinnerProps {
     fullPage?: boolean;
@@ -7,8 +7,8 @@ interface ISpinnerProps {
 
 export const Spinner = ({ fullPage = false }: ISpinnerProps) => {
     return (
-        <Layout centerContent={fullPage}>
+        <div className={cn({ 'flex-1': fullPage })}>
             <SpinnerIcon />
-        </Layout>
+        </div>
     );
 };

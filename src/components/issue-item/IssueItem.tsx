@@ -3,6 +3,7 @@ import { CommentIcon, IssueOpenIcon } from 'assets/icons';
 import TimeAgo from 'javascript-time-ago';
 import en from 'javascript-time-ago/locale/en.json';
 import { IIssue } from 'types/IIssue';
+import { strings } from 'utils';
 
 // Create formatter (English).
 TimeAgo.addDefaultLocale(en);
@@ -28,23 +29,23 @@ export const IssueItem = ({ issue }: IIssueItemProps) => {
         <a
             href={html_url}
             target="_blank"
-            className="border-t border-white/20 hover:bg-hover p-4 flex justify-between items-center"
+            className="border-t border-white/20 hover:bg-hover p-4 flex justify-between items-center group"
         >
             <div className="flex space-x-2.5">
                 <span>
                     <IssueOpenIcon type="success" />
                 </span>
                 <div className="flex flex-col">
-                    <p className="text-sm">{title}</p>
+                    <p className="text-sm group-hover:text-blue">{title}</p>
                     <div className="pt-1 flex space-x-1 items-center text-xs text-secondary/50">
                         <p>#{number}</p>
                         <p>
-                            opened {time} by {login}
+                            {strings.opened} {time} {strings.by} {login}
                         </p>
                     </div>
                 </div>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 pl-5">
                 <CommentIcon /> <span className="text-secondary/50 text-sm">{comments}</span>
             </div>
         </a>
