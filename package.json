@@ -10,8 +10,10 @@
         "@types/node": "^16.7.13",
         "@types/react": "^17.0.20",
         "@types/react-dom": "^17.0.9",
+        "classnames": "^2.3.1",
         "react": "^18.0.0",
         "react-dom": "^18.0.0",
+        "react-router-dom": "^6.3.0",
         "react-scripts": "5.0.0",
         "typescript": "^4.4.2",
         "web-vitals": "^2.1.0"
@@ -37,14 +39,10 @@
         ]
     },
     "devDependencies": {
-        "autoprefixer": "^10.4.4",
-        "install": "^0.13.0",
-        "npm": "^8.6.0",
-        "postcss": "^8.4.12",
-        "tailwindcss": "^3.0.23",
-        "eslint": "^8.12.0",
         "@typescript-eslint/eslint-plugin": "^5.17.0",
         "@typescript-eslint/parser": "^5.17.0",
+        "autoprefixer": "^10.4.4",
+        "eslint": "^8.12.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-airbnb-typescript": "^16.2.0",
         "eslint-config-prettier": "^8.5.0",
@@ -54,6 +52,10 @@
         "eslint-plugin-prettier": "^4.0.0",
         "eslint-plugin-react": "^7.29.4",
         "eslint-plugin-react-hooks": "^4.4.0",
-        "prettier": "^2.6.1"
+        "install": "^0.13.0",
+        "npm": "^8.6.0",
+        "postcss": "^8.4.12",
+        "prettier": "^2.6.1",
+        "tailwindcss": "^3.0.23"
     }
 }

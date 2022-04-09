@@ -1,10 +1,9 @@
-import { Dummy } from 'components/Dummy';
+import { Router } from 'router';
 
 const App = () => {
     return (
         <div className="bg-background">
-            <Dummy />
-            <h1 className="text-5xl text-center text-primary py-5">Hello world</h1>
+            <Router />
         </div>
     );
 };
