@@ -10,6 +10,12 @@ module.exports = {
                 background: '#040C28',
                 hover: '#1D243D',
                 blue: '#3267F0',
+                tooltip: '#3D0C23',
+            },
+            opacity: {
+                12: '.12',
+                14: '.14',
+                28: '.28',
             },
         },
     },

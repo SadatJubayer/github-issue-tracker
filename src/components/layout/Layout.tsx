@@ -21,7 +21,7 @@ export const Layout = ({ children, bgWithSvg, centerContent }: ILayoutProps) => 
             <Navbar />
             <main
                 className={cn('max-w-7xl mx-auto grow w-full', {
-                    'flex justify-center items-center mb-24': centerContent,
+                    'flex flex-col justify-center items-center mb-24 md:mb-48': centerContent,
                 })}
             >
                 {children}
