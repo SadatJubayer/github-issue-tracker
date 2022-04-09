@@ -1,5 +1,11 @@
 export const strings = {
     appName: 'GitHub Issue Tracker',
+    owner: 'Owner',
+    owner_name: 'Owner name',
+    repo: 'Repository',
+    repo_name: 'Repository name',
+    show_issues: 'Show issues',
+    required_field: 'This field is required',
 
     /* Not found page  */
     not_found: 'Page not found!',

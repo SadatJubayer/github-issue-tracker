@@ -8,7 +8,10 @@ export const Router = () => {
             <Routes>
                 {/* App Routes */}
                 <Route path={appRoutes.HOME_PAGE} element={<HomePage />} />
-                <Route path={appRoutes.ISSUES_PAGE} element={<IssuesPage />} />
+                <Route
+                    path={`${appRoutes.ISSUES_PAGE}/:owner/:repository`}
+                    element={<IssuesPage />}
+                />
 
                 {/* Other Routes */}
                 <Route path={appRoutes.NOT_FOUND} element={<FourOhFourPage />} />
