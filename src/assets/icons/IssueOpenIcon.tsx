@@ -8,7 +8,7 @@ export const IssueOpenIcon = ({ type }: { type?: string }) => {
                 cy="9"
                 r="8.5"
                 className={cn('bg-transparent stroke-current text-secondary', {
-                    'text-success': type === 'success',
+                    'text-success group-hover:text-primary': type === 'success',
                 })}
             ></circle>
             <circle
@@ -16,7 +16,7 @@ export const IssueOpenIcon = ({ type }: { type?: string }) => {
                 cy="9"
                 r="2"
                 className={cn('fill-current text-secondary', {
-                    'text-success': type === 'success',
+                    'text-success group-hover:text-primary': type === 'success',
                 })}
             ></circle>
         </svg>
