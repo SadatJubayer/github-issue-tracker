@@ -1,46 +1,140 @@
-# Getting Started with Create React App
+# Github Issue Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React application to search and view the issues of any Github public repository.
 
-## Available Scripts
+It uses GitHub API to search the issues by GitHub owner name and repository name.
 
-In the project directory, you can run:
+## 📷 ScreenShoot (s)
 
-### `yarn start`
+> Home page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Home page](https://i.postimg.cc/vZcDcpps/homepage.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+> Issues list page
 
-### `yarn test`
+![Issues list page](https://i.postimg.cc/4dbxDZhz/issuespage.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 👨‍💻 Installation and Setup Instructions
 
-### `yarn build`
+To run locally, you will need to clone down this repository. You will need `node` and `npm` or `yarn` installed globally on your machine.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You need to export your GitHub token on the `.env` file -
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```shell
+REACT_APP_GITHUB_TOKEN=YOUR_GITHUB_TOKEN_HERE
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Install the dependencies
 
-### `yarn eject`
+```shell
+yarn
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To run the project locally
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```shell
+yarn start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To run tests
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```shell
+yarn test
+```
 
-## Learn More
+To view the test coverage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```shell
+yarn test:cov
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To run eslint and prettier checks
+
+```shell
+yarn lint
+```
+
+To fix eslint and prettier issues silently
+
+```shell
+yarn lint:fix
+```
+
+<details>
+  <summary> Commands with npm</summary>
+
+Install the dependencies
+
+```shell
+npm install
+```
+
+To run project locally
+
+```shell
+npm start
+```
+
+To run tests
+
+```shell
+npm test
+```
+
+To run test coverage
+
+```shell
+npm run test:cov
+```
+
+To run eslint and prettier checks
+
+```shell
+npm run lint
+```
+
+To fix eslint and prettier issues silently
+
+```shell
+npm run lint:fix
+```
+
+</details>
+
+# 📑 Overview
+
+-   `api/axios.ts` - API caller with Axios with custom configuration.
+-   `api/*.ts` - All async functions for APIs calls, separated by a named file.
+-   `assets/*` - Application static-asset files (like- icons, images etc.) are here.
+-   `components/*` - All application components go here. Separated by folder, which contains the component itself, style modules, and test.
+-   `hooks/*` - Custom hooks are here.
+-   `pages/*` - All application pages are here. These pages use other components to build the whole page.
+-   `router/index.ts` - Application routes are defined here. Used React-Router-Dom v6.
+-   `store/*` - Redux files are here. Reduces are separated by slices.
+-   `types/*` - Reusable types are here. The component's props types are defined on indivual component itself.
+-   `utils/constants.ts` - Constants of the applications are here.
+-   `utils/pageBuilder.ts` - Helper function for creating a numbered list of pagination.
+-   `utils/strings.ts` - All strings are here, which makes it easy to add i18n.
+-   .eslintrc.json: Adds the ESLint configuration for the project.
+-   .prettierrc.js: Adds the Prettier configuration for the project.
+
+## 💻 Technical Choices
+
+-   `React`, `TypeScript`, and `Redux` were the requirements.
+-   `Axios` - I have used Axios for data fetching. It makes it easy to integrate APIs and has great features like Interceptors, Built-in XSRF protection, etc.
+-   `TailwindCSS` - Used tailwind CSS for styling the whole application without writing a single line of custom CSS. It also provided a customizable theme.
+-   `classnames` - It helps to make conditional styling. All it is is a single function, taking different values as arguments and spitting out a single string based on them.
+
+## 👌 Improvements
+
+As the time was limited to develop the project, I couldn't make it with all the ideas in my mind. Things I consider adding to make it better -
+
+1. **Data fetching library**: A data-fetching library can be used to better and clean data fetching and caching. My choice would be [React Query](https://react-query.tanstack.com/) or [SWR](https://swr.vercel.app/).
+
+2. **Git Hooks**: Pre-commit hooks can be added to check esLint errors, prettier errors, tests, and build errors. `lint-staged` & `husky` would be a good combination for this.
+
+3. **More Testing**: There are some test cases with the `React Testing Library for the components. Writing more test cases would be great.
+
+## Author
+
+-   [@SadatJubayer](https://www.smjubayer.me)
