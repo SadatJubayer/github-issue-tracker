@@ -40,7 +40,7 @@ export const HomePage = () => {
     return (
         <Layout bgWithSvg centerContent>
             <form onSubmit={handleFromSubmit}>
-                <div className="flex justify-center items-center space-x-5">
+                <div className="flex flex-col sm:flex-row space-x-0 sm:space-x-5 justify-center items-center ">
                     <Input
                         value={owner}
                         onChange={(e) => setOwner(e.target.value)}
