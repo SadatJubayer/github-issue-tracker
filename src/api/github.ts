@@ -26,7 +26,7 @@ export const getIssuesByOwnerAndRepo = async ({
 }: IGitHubInputs): Promise<IResponse> => {
     try {
         const response = await axios.get(
-            `${apiRoutes.issues}?q=repo:${owner}/${repository}+type:issue+state:closed`,
+            `${apiRoutes.issues}?q=repo:${owner}/${repository}+type:issue`,
             {
                 params: {
                     per_page: `${ISSUES_PER_PAGE}`,
