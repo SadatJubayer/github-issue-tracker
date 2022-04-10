@@ -1,4 +1,4 @@
-export { AppIcon } from './AppIcon';
+export { AppLogo } from './AppLogo';
 export { CommentIcon } from './CommentIcon';
 export { IssueClosedIcon } from './IssueClosedIcons';
 export { IssueOpenIcon } from './IssueOpenIcon';
