@@ -10,7 +10,7 @@
         "@types/jest": "^27.0.1",
         "@types/node": "^16.7.13",
         "@types/react": "^17.0.20",
-        "@types/react-dom": "^17.0.9",
+        "@types/react-dom": "^18.0.0",
         "axios": "^0.26.1",
         "classnames": "^2.3.1",
         "javascript-time-ago": "^2.3.13",
@@ -25,10 +25,11 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
-        "test": "react-scripts test",
         "eject": "react-scripts eject",
         "lint": "eslint src",
-        "lint:fix": "eslint src --quiet --fix"
+        "lint:fix": "eslint src --quiet --fix",
+        "test": "react-scripts test --verbose",
+        "test:cov": "yarn test --coverage --watchAll=false"
     },
     "browserslist": {
         "production": [
@@ -62,5 +63,11 @@
         "postcss": "^8.4.12",
         "prettier": "^2.6.1",
         "tailwindcss": "^3.0.23"
+    },
+    "jest": {
+        "collectCoverageFrom": [
+            "./src/components/**/*.tsx",
+            "./src/pages/**/*.tsx"
+        ]
     }
 }
